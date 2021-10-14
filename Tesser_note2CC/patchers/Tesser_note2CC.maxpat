@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 84.0, 129.0, 1182.0, 659.0 ],
+		"rect" : [ 1588.0, 125.0, 1182.0, 659.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,71 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 636.5, 393.0, 19.0, 22.0 ],
+					"text" : "t l"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-13",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 636.5, -3.0, 52.0, 22.0 ],
+					"text" : "gate 1 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 45.0, 140.0, 150.0, 33.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 28.0, 124.0, 157.0, 20.0 ],
+					"text" : "← allow remaining CC thru"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "live.toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 636.5, -62.0, 34.0, 30.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 11.0, 125.0, 19.0, 17.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_enum" : [ "off", "on" ],
+							"parameter_linknames" : 1,
+							"parameter_longname" : "thruCC-toggle",
+							"parameter_mmax" : 1,
+							"parameter_shortname" : "CCthru",
+							"parameter_type" : 2
+						}
+
+					}
+,
+					"varname" : "thruCC-toggle"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-65",
 					"maxclass" : "newobj",
@@ -681,15 +746,16 @@
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "off", "on" ],
-							"parameter_longname" : "live.toggle[1]",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "velocity-toggle",
 							"parameter_mmax" : 1,
-							"parameter_shortname" : "live.toggle",
+							"parameter_shortname" : "veloToggle",
 							"parameter_type" : 2
 						}
 
 					}
 ,
-					"varname" : "live.toggle[1]"
+					"varname" : "velocity-toggle"
 				}
 
 			}
@@ -708,15 +774,16 @@
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "off", "on" ],
-							"parameter_longname" : "live.toggle",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "midinote-toggle",
 							"parameter_mmax" : 1,
-							"parameter_shortname" : "live.toggle",
+							"parameter_shortname" : "noteToggle",
 							"parameter_type" : 2
 						}
 
 					}
 ,
-					"varname" : "live.toggle"
+					"varname" : "midinote-toggle"
 				}
 
 			}
@@ -773,15 +840,16 @@
 					"presentation_rect" : [ 45.0, 67.0, 53.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "live.numbox[1]",
-							"parameter_shortname" : "live.numbox",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "velocities",
+							"parameter_shortname" : "velocities",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0
 						}
 
 					}
 ,
-					"varname" : "live.numbox[1]"
+					"varname" : "velocities"
 				}
 
 			}
@@ -812,15 +880,16 @@
 					"presentation_rect" : [ 45.0, 45.0, 53.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "live.numbox",
-							"parameter_shortname" : "live.numbox",
+							"parameter_linknames" : 1,
+							"parameter_longname" : "midinotes",
+							"parameter_shortname" : "midinotes",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0
 						}
 
 					}
 ,
-					"varname" : "live.numbox"
+					"varname" : "midinotes"
 				}
 
 			}
@@ -843,7 +912,7 @@
 					"numinlets" : 7,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "" ],
-					"patching_rect" : [ 432.0, 512.0, 82.0, 22.0 ],
+					"patching_rect" : [ 432.0, 544.0, 82.0, 22.0 ],
 					"text" : "midiformat"
 				}
 
@@ -855,7 +924,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 8,
 					"outlettype" : [ "", "", "", "int", "int", "", "int", "" ],
-					"patching_rect" : [ 486.0, 99.0, 92.5, 22.0 ],
+					"patching_rect" : [ 486.0, -3.0, 92.5, 22.0 ],
 					"text" : "midiparse"
 				}
 
@@ -866,7 +935,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 432.0, 557.0, 47.0, 22.0 ],
+					"patching_rect" : [ 432.0, 590.0, 47.0, 22.0 ],
 					"text" : "midiout"
 				}
 
@@ -878,7 +947,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 486.0, 32.0, 40.0, 22.0 ],
+					"patching_rect" : [ 486.0, -70.0, 40.0, 22.0 ],
 					"text" : "midiin"
 				}
 
@@ -904,6 +973,13 @@
 					"destination" : [ "obj-52", 0 ],
 					"order" : 0,
 					"source" : [ "obj-12", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-21", 0 ],
+					"source" : [ "obj-13", 0 ]
 				}
 
 			}
@@ -971,6 +1047,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-4", 2 ],
+					"source" : [ "obj-21", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-26", 0 ],
 					"source" : [ "obj-25", 0 ]
 				}
@@ -1001,6 +1084,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-42", 0 ],
 					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-13", 1 ],
+					"source" : [ "obj-3", 2 ]
 				}
 
 			}
@@ -1118,6 +1208,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-62", 0 ],
 					"source" : [ "obj-61", 0 ]
 				}
@@ -1204,10 +1301,11 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-12" : [ "live.numbox[1]", "live.numbox", 0 ],
-			"obj-16" : [ "live.toggle", "live.toggle", 0 ],
-			"obj-17" : [ "live.toggle[1]", "live.toggle", 0 ],
-			"obj-8" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-12" : [ "velocities", "velocities", 0 ],
+			"obj-16" : [ "midinote-toggle", "noteToggle", 0 ],
+			"obj-17" : [ "velocity-toggle", "veloToggle", 0 ],
+			"obj-6" : [ "thruCC-toggle", "CCthru", 0 ],
+			"obj-8" : [ "midinotes", "midinotes", 0 ],
 			"parameterbanks" : 			{
 
 			}
