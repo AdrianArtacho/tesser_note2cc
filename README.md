@@ -2,21 +2,30 @@ This Patch is part of the [TESSER environment](https://bitbucket.org/AdrianArtac
 
 ![TTESS:Logo](https://bitbucket.org/AdrianArtacho/tesserakt/raw/HEAD/TESSER_logo.png)
 
-# Tesser_note2CC #
+# Tesser_note2CC
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This device takes in **midinotes** (*notenumber*, *velocity*) and converts is to a CC message.
 
-### What is this repository for? ###
+![TESS:note2CC](https://docs.google.com/drawings/d/e/2PACX-1vRtUaCsI19S-xqIuz3jQ5vEL33wHHZ0cT9D1Z9ZHcbvIFWH95QEWUu53e4yIS3JNZKxTQ4Wd5GJljjz/pub?w=272&h=259)
+
+### Usage
 
 * Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
-### How do I get set up? ###
+____
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+# To-Do
+
+* Cleanup GUI, to make clear how it works
+
+* finish documentation
+
+* An alternative mode could have the *notenumber* set the CC number, 
+  and the *notevalue* be the value of the CC message. Or vice versa.
+  as
+
+* make sure all object names are ---
+
+* make sure all stored values have `Param mode enable` activated.
+
+* add `clientwindow` button
