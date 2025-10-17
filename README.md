@@ -6,7 +6,7 @@ This Patch is part of the [TESSER environment](https://bitbucket.org/AdrianArtac
 
 This device takes in **midinotes** (*notenumber*, *velocity*) and converts is to a CC message.
 
-![TESS:note2CC](https://docs.google.com/drawings/d/e/2PACX-1vRtUaCsI19S-xqIuz3jQ5vEL33wHHZ0cT9D1Z9ZHcbvIFWH95QEWUu53e4yIS3JNZKxTQ4Wd5GJljjz/pub?w=272&h=259)
+![TESS:note2CC](img/gui.png)
 
 ### Usage
 
